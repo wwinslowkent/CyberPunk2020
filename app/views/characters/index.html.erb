@@ -1,0 +1,15 @@
+<div class='dark'>
+<h1>Characters</h1>
+
+<% @characters.each do |character| %>
+<%= link_to character_path(character) do %>
+  <div class='characterbox'>
+    <%= character.name %><br/>
+  </div>
+  <% end %>
+<% end %>
+
+
+<%= button_to 'Add a new Character', new_character_path, method: :get %>
+
+</div>
